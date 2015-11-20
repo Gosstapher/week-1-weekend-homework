@@ -1,154 +1,183 @@
 WAREHOUSE = [
   {
-    :letter => "a",
-    :number => "1",
-    :content => "needle"
+    letter: "a", 
+    number: "10",
+    content: "rubber band"
   },
+
   {
-    :letter => "a",
-    :number => "2",
-    :content => "stop sign"
+    letter: "a", 
+    number: "9",
+    content: "glow stick"
   },
+
   {
-    :letter => "a",
-    :number => "3",
-    :content => "blouse"
+    letter: "a", 
+    number: "8",
+    content: "model car"
   },
+
   {
-    :letter => "a",
-    :number => "4",
-    :content => "hanger"
+    letter: "a", 
+    number: "7",
+    content: "bookmark"
   },
+
   {
-    :letter => "a",
-    :number => "5",
-    :content => "rubber duck"
+    letter: "a", 
+    number: "6",
+    content: "shovel"
   },
+
   {
-    :letter => "a",
-    :number => "6",
-    :content => "shovel"
+    letter: "a", 
+    number: "5",
+    content: "rubber duck"
   },
+
   {
-    :letter => "a",
-    :number => "7",
-    :content => "bookmark"
+    letter: "a", 
+    number: "4",
+    content: "hanger"
   },
+
   {
-    :letter => "a",
-    :number => "8",
-    :content => "model car"
+    letter: "a", 
+    number: "3",
+    content: "blouse"
   },
+
   {
-    :letter => "a",
-    :number => "9",
-    :content => "glowstick"
+    letter: "a", 
+    number: "2",
+    content: "stop sign"
   },
+
   {
-    :letter => "a",
-    :number => "10",
-    :content => "rubber band"
+    letter: "a", 
+    number: "1",
+    content: "needle"
   },
+
   {
-    :letter => "b",
-    :number => "1",
-    :content => "tyre swing"
+    letter: "c", 
+    number: "1",
+    content: "rusty nail"
   },
+
   {
-    :letter => "b",
-    :number => "2",
-    :content => "sharpie"
+    letter: "c", 
+    number: "2",
+    content: "drill press"
   },
+
   {
-    :letter => "b",
-    :number => "3",
-    :content => "picture frame"
+    letter: "c", 
+    number: "3",
+    content: "chalk"
   },
+
   {
-    :letter => "b",
-    :number => "4",
-    :content => "photo album"
+    letter: "c", 
+    number: "4",
+    content: "word search"
   },
+
   {
-    :letter => "b",
-    :number => "5",
-    :content => "nail filer"
+    letter: "c", 
+    number: "5",
+    content: "thermometer"
   },
+
   {
-    :letter => "b",
-    :number => "6",
-    :content => "tooth paste"
+    letter: "c", 
+    number: "6",
+    content: "face wash"
   },
+
   {
-    :letter => "b",
-    :number => "7",
-    :content => "bath fizzers"
+    letter: "c", 
+    number: "7",
+    content: "paint brush"
   },
+
   {
-    :letter => "b",
-    :number => "8",
-    :content => "tissue box"
+    letter: "c", 
+    number: "8",
+    content: "candy wrapper"
   },
+
   {
-    :letter => "b",
-    :number => "9",
-    :content => "deodorant"
+    letter: "c", 
+    number: "9",
+    content: "shoe lace"
   },
+
   {
-    :letter => "b",
-    :number => "10",
-    :content => "cookie jar"
+    letter: "c", 
+    number: "10",
+    content: "leg warmers"
   },
+
   {
-    :letter => "c",
-    :number => "1",
-    :content => "rusty nail"
+    letter: "b", 
+    number: "1",
+    content: "tyre swing"
   },
+
   {
-    :letter => "c",
-    :number => "2",
-    :content => "drill press"
+    letter: "b", 
+    number: "2",
+    content: "sharpie"
   },
+
   {
-    :letter => "c",
-    :number => "3",
-    :content => "chalk"
+    letter: "b", 
+    number: "3",
+    content: "picture frame"
   },
+
   {
-    :letter => "c",
-    :number => "4",
-    :content => "word search"
+    letter: "b", 
+    number: "4",
+    content: "photo album"
   },
+
   {
-    :letter => "c",
-    :number => "5",
-    :content => "thermometer"
+    letter: "b", 
+    number: "5",
+    content: "nail filer"
   },
+
   {
-    :letter => "c",
-    :number => "6",
-    :content => "face wash"
+    letter: "b", 
+    number: "6",
+    content: "tooth paste"
   },
+
   {
-    :letter => "c",
-    :number => "7",
-    :content => "paint brush"
+    letter: "b", 
+    number: "7",
+    content: "bath fizzers"
   },
+
   {
-    :letter => "c",
-    :number => "8",
-    :content => "candy wrapper"
+    letter: "b", 
+    number: "8",
+    content: "tissue box"
   },
+
   {
-    :letter => "c",
-    :number => "9",
-    :content => "shoe lace"
+    letter: "b", 
+    number: "9",
+    content: "deodorant"
   },
+
   {
-    :letter => "c",
-    :number => "10",
-    :content => "leg warmers"
-  },
+    letter: "b", 
+    number: "10",
+    content: "cookie jar"
+  }
 ]
 
 
@@ -167,7 +196,9 @@ def bay_finder(item_name)
   WAREHOUSE.select{|x| x[:content] == item_name}.first[:letter] + WAREHOUSE.select{|x| x[:content] == item_name}.first[:number]
 end
 
-
+def item_at_bay_plural(baynum_1, baynum_2, baynum_3)
+  item_at_bay(baynum_1) + ", " + item_at_bay(baynum_2) + ", and " + item_at_bay(baynum_3)
+end
 
 
 
