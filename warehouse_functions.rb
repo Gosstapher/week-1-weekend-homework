@@ -204,7 +204,17 @@ def bay_finder_plural(item_name_1, item_name_2, item_name_3)
   bay_finder(item_name_1) + ", " + bay_finder(item_name_2) + " and " + bay_finder(item_name_3)
 end
 
+def distance_calc(baynum_1, baynum_2, baynum_3)
+items = [item_at_bay(baynum_1), item_at_bay(baynum_2), item_at_bay(baynum_3)]
 
+lowest, highest = items.map { |item| find_bay_index(item) }.minmax
+highest - lowest
+
+end
+
+def find_bay_index(item) 
+  WAREHOUSE.index { |bay| bay[:content] == item }
+end
 
 
 

@@ -11,8 +11,8 @@ puts "bay containing nail is #{found_bay}, expect it to be b5"
 puts "\n"
 
 # Given a list of bays, list the items in those bays
-found_item_plural = item_at_bay_plural("b5", "b10", "b6")
-puts "items found in bays b5, b10, and b6 are #{found_item_plural}, expected items are nail filer, cookie jar, and tooth paste"
+found_item_plural = item_at_bay_plural("b5", "b9", "b6")
+puts "items found in bays b5, b9, and b6 are #{found_item_plural}, expected items are nail filer, deodorant, and tooth paste"
 puts "\n"
 
 # Given a list of items find the bays.
@@ -20,3 +20,10 @@ found_bay_plural = bay_finder_plural("shoe lace", "rusty nail", "leg warmers")
 puts "bays containing items shoe lace, rusty nail, leg warmers are #{found_bay_plural}, 
 expected bays are c9, c1, c10"
 puts "\n"
+
+# Given a list of bays, list the items in those bays, and calculate the distance from the two furthest apart bays
+ distance_check_items = item_at_bay_plural("b5", "b9", "b6")
+ distance_check = distance_calc("b5", "b9", "b6")
+ puts "items in bays b5, b9, and b6 are #{distance_check_items}, expected nail filer, deodorant and tooth paste."
+ puts "\n"
+ puts "the distance between the furthest apart bays is #{distance_check}, expected distance is 4"
