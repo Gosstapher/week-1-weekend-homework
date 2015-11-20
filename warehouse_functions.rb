@@ -200,6 +200,10 @@ def item_at_bay_plural(baynum_1, baynum_2, baynum_3)
   item_at_bay(baynum_1) + ", " + item_at_bay(baynum_2) + ", and " + item_at_bay(baynum_3)
 end
 
+def bay_finder_plural(item_name_1, item_name_2, item_name_3)
+  bay_finder(item_name_1) + ", " + bay_finder(item_name_2) + " and " + bay_finder(item_name_3)
+end
+
 
 
 
