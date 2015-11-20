@@ -154,9 +154,16 @@ WAREHOUSE = [
 
 
 
-def item_at_bay()
-  return WAREHOUSE[1][:b5]
+# def item_at_bay()
+#   return WAREHOUSE[14][:content]
+# end
+
+def item_at_bay(baynum)
+  baynum_split = baynum.downcase.split(//)
+  WAREHOUSE.select {|x| x[:letter] == baynum_split[0] && x[:number] == baynum_split[1]}.first[:content]
 end
+
+
 
 
 
