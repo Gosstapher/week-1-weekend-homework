@@ -163,6 +163,9 @@ def item_at_bay(baynum)
   WAREHOUSE.select {|x| x[:letter] == baynum_split[0] && x[:number] == baynum_split[1]}.first[:content]
 end
 
+def bay_finder(item_name)
+  WAREHOUSE.select{|x| x[:content] == item_name}.first[:letter] + WAREHOUSE.select{|x| x[:content] == item_name}.first[:number]
+end
 
 
 
