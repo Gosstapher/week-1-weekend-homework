@@ -7,7 +7,7 @@ puts "\n"
 
 # Given an item return the bay that it is in.
 found_bay = bay_finder("nail filer")
-puts "bay containing nail is #{found_bay}, expect it to be b5"
+puts "bay containing nail filer is #{found_bay}, expect it to be b5"
 puts "\n"
 
 # Given a list of bays, list the items in those bays
@@ -25,5 +25,4 @@ puts "\n"
  distance_check_items = item_at_bay_plural("b5", "b9", "b6")
  distance_check = distance_calc("b5", "b9", "b6")
  puts "items in bays b5, b9, and b6 are #{distance_check_items}, expected nail filer, deodorant and tooth paste."
- puts "\n"
  puts "the distance between the furthest apart bays is #{distance_check}, expected distance is 4"
